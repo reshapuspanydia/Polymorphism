@@ -1,0 +1,38 @@
+Polymorphism (Banyak bentuk) adalah suatu kemampuan yang dimiliki sebuah method ,
+yang mempunyai nama sama ,namun dengan perilaku yang berbeda-beda.
+Kemampuan objek agar melakukan perilaku atau tindakan yang secara konsep sama, namun dengan cara yang berbeda-beda. 
+
+Saya menggunakan method Overriding dalam Polymorphism dimana antara Super Class dan Sub Class memiliki method yang sama,
+namun perilaku yang berbeda.
+
+public class Kendaraan { // Super Class Kendaraan
+	public void bahanbakar() { // Membuat Method bahanbakar()
+	System.out.println("Ini adalah bahan bakar yang digunakan oleh beberapa kendaraan"); //statement dari perilaku untuk menampilkan pesan text
+	}  
+}  
+public class Truk extends Kendaraan { //Sub Class Truk
+	public void bahanbakar() { //membuat method bahanbakar() sama seperti super class Kendaraan
+	System.out.println("Truk bahan bakar Solar");
+	//statement dari perilaku untuk menampilkan pesan text
+	//pesan text berbeda dengan super class kendaraan
+	}  
+} 
+public class Motor extends Kendaraan { //Sub Class Motor
+	public void bahanbakar() { //membuat method bahanbakar() sama seperti super class Kendaraan dan sub class Truk
+	System.out.println("Motor bahan bakar Bensin Premium");
+	//statement dari perilaku untuk menampilkan pesan text
+	//pesan text berbeda dengan super class kendaraan dab sub class Truk
+	}  
+	
+	public static void main(String args[]){  // program utama untuk eksekusi
+	Kendaraan ken = new Kendaraan(); //membuat object
+    Kendaraan a = new Truk();	//membuat object
+	Kendaraan b = new Motor(); //membuat object
+	ken.bahanbakar(); //memanggil object dengan method yang sama namun hasil yang berbeda
+    a.bahanbakar();  //memanggil object dengan method yang sama namun hasil yang berbeda
+	b.bahanbakar(); //memanggil object dengan method yang sama namun hasil yang berbeda
+  }  
+} 
+
+sekian yang bisa saya jelaskan tentang Polymorphism dengan method Overriding. terimakasih.
+ 
